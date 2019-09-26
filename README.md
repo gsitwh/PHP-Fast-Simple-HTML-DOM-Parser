@@ -7,13 +7,13 @@
 
 PHP Fast Simple HTML DOM Parser - fast and low mamory usage HTML DOM Parser with syntax like PHP Simple HTML DOM Parser
 
-## Установка
+## Installation
 
-Для установки выполните команду:
+To install, run the command:
 
     composer require dimabdc/php-fast-simple-html-dom-parser
 
-## Быстрый старт
+## Fast start
 
 ```php    
 require_once "vendor/autoload.php";
@@ -34,7 +34,7 @@ foreach($html->find('div.post') as $post) {
 print_r($post);
 ```
 
-## Как создать HTML DOM объект
+## How to create an HTML DOM object
 
 ```php    
 
@@ -53,9 +53,9 @@ $html->loadHtmlFile('test.htm');
 $html = new Document(file_get_contents('https://habrahabr.ru/interesting/'));
 ```
 
-## Как искать HTML DOM элементы?
+## How to search HTML DOM elements?
 
-### Основа
+### The basis
 
 ```php    
 
@@ -75,7 +75,7 @@ $ret = $html->find('div[id]');
 $ret = $html->find('div[id=foo]'); 
 ```
 
-### Часто используемое
+### Frequently used
 
 ```php    
 
@@ -95,7 +95,7 @@ $ret = $html->find('a, img');
 $ret = $html->find('a[title], img[title]');
 ```
 
-### Слекторы потомков
+### Descendants Sectors
 
 ```php    
 
@@ -112,7 +112,7 @@ $es = $html->find('table.hello td');
 $es = $html->find('table td[align=center]');
 ```
 
-### Вложенные селекторы
+### Nested Selectors
 
 ```php    
 
@@ -129,7 +129,7 @@ foreach($html->find('ul') as $ul)
 $e = $html->find('ul', 0)->find('li', 0);
 ```
 
-### Фильтр атрибутов
+### Attribute Filter
 
 Filter	|Description
 ---|---
@@ -141,7 +141,7 @@ Filter	|Description
 [attribute$=value]	|Matches elements that have the specified attribute and it ends with a certain value.
 [attribute*=value]	|Matches elements that have the specified attribute and it contains a certain value.
 
-### Текст, комментарии
+### Text, comments
 
 ```php    
 
@@ -152,9 +152,9 @@ $es = $html->find('text');
 $es = $html->find('comment');
 ```
 
-## Доступ к атрибутам
+## Attribute Access
 
-### Получение, установка и удаление атрибутов
+### Retrieving, setting, and deleting attributes
 
 ```php    
 
@@ -172,7 +172,7 @@ if(isset($e->href))
         echo 'href exist!';
 ```
 
-### "Магические" атрибуты
+### "Magic" Attributes
 
 ```php    
 
@@ -193,7 +193,7 @@ $e->outertext	|Read or write the outer HTML text of element.
 $e->innertext	|Read or write the inner HTML text of element.
 $e->plaintext	|Read or write the plain text of element.
 
-### Трюки
+### Tricks
 
 ```php    
 
@@ -213,7 +213,7 @@ $e->outertext = $e->outertext . '<div>foo<div>';
 $e->outertext = '<div>foo<div>' . $e->outertext;
 ```
 
-## Прогон по DOM-дереву
+## DOM tree run
 
 ```php    
 
@@ -234,9 +234,9 @@ Method	|Description
 `Element` $e->next_sibling()	|Returns the next sibling of element, or null if not found.
 `Element` $e->prev_sibling()	|Returns the previous sibling of element, or null if not found.
 
-## API-справочник
+## API-reference
 
-### Методы и свойства DOM
+### DOM Methods and Properties
 
 Name	|Description
 ---|---
@@ -255,7 +255,7 @@ Name	|Description
 `string` plaintext	|Read or write the plain text of element.
 `mixed` find (string $selector [, int $index])	|Find children by the CSS selector. Returns the Nth element object if index is set, otherwise, return an array of object.
 
-### Прогон по дереву DOM
+### Wood girder DOM
 
 Name	|Description
 ---|---
@@ -266,7 +266,7 @@ Name	|Description
 `element` $e->next_sibling()	|Returns the next sibling of element, or null if not found.
 `element` $e->prev_sibling()	|Returns the previous sibling of element, or null if not found.
 
-### camelCase эквиваленты
+### camelCase equivalents
 
 ```php    
 
