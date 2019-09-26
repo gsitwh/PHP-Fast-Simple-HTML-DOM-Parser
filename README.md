@@ -244,7 +244,7 @@ Name	|Description
 `string` plaintext	|Returns the contents extracted from HTML.
 `mixed` find (string $selector [, int $index])	|Find elements by the CSS selector. Returns the Nth element object if index is set, otherwise return an array of object.
 
-### Методы и свойства элементов
+### Methods and properties of elements
 
 Name	|Description
 ---|---
@@ -312,3 +312,5 @@ element $e->next_sibling()
 element $e->previousSibling()
 element $e->prev_sibling()
 ```
+
+Спасибо русским разработчикам
