@@ -313,4 +313,4 @@ element $e->previousSibling()
 element $e->prev_sibling()
 ```
 
-Спасибо русским разработчикам
+### спасибо Дмитрию
